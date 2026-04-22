@@ -7,7 +7,8 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-  site: 'https://ugk-fan.example.com',
+  site: 'https://softdsk-n8n.github.io',
+  base: '/ugk-fan-landing',
   compressHTML: true,
   prefetch: {
     prefetchAll: true,
