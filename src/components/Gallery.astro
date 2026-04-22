@@ -1,0 +1,45 @@
+---
+const images = [
+  { src: '/images/gallery/01.webp', alt: 'UGK — архивное фото', span: 'col-span-2 row-span-2' },
+  { src: '/images/gallery/02.jpg', alt: 'UGK — архивное фото', span: '' },
+  { src: '/images/gallery/03.jpg', alt: 'UGK — архивное фото', span: '' },
+  { src: 'https://source.unsplash.com/800x800/?candy-paint-car,cadillac', alt: 'Candy paint Cadillac', span: '' },
+  { src: 'https://source.unsplash.com/800x800/?vinyl-record,hip-hop', alt: 'Винил', span: '' },
+  { src: 'https://source.unsplash.com/1200x800/?houston,texas-street,night', alt: 'Хьюстон ночью', span: 'col-span-2' },
+  { src: 'https://source.unsplash.com/800x800/?concert-crowd,hip-hop', alt: 'Концертная толпа', span: '' },
+];
+---
+<section id="gallery" class="relative py-24 md:py-40 bg-ink">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6">
+      / 07 — АРХИВ
+    </div>
+    <h2 class="font-heading text-5xl md:text-7xl uppercase tracking-brutal text-parchment mb-4">
+      Визуальный<br />
+      <span class="text-crimson">код.</span>
+    </h2>
+    <p class="font-body text-lg text-parchment/70 max-w-2xl mb-12 md:mb-16">
+      Фрагменты наследия. Candy paint, винил, Port Arthur, бесконечные рамки.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[240px] gap-3 md:gap-4">
+      {images.map((img) => (
+        <figure class={`relative overflow-hidden brutal-border-crimson group ${img.span}`}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+            onerror="this.style.display='none'"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+        </figure>
+      ))}
+    </div>
+
+    <p class="mt-8 font-mono text-xs text-parchment/40 uppercase tracking-wider">
+      Фото 01–03: архив. 04–07: Unsplash, образы эпохи.
+    </p>
+  </div>
+</section>

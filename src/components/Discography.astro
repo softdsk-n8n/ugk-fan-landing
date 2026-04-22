@@ -1,0 +1,79 @@
+---
+import albums from '../data/albums.json';
+
+const placeholderColor = (idx: number) => {
+  const palette = ['0A0A0A', '6B0F9F', '9E0000', '7A5A2E', 'FFD700', 'F5EDDE'];
+  return palette[idx % palette.length];
+};
+---
+<section id="discography" class="relative py-24 md:py-40 bg-ink-2">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6">
+      / 03 — ДИСКОГРАФИЯ
+    </div>
+    <h2 class="font-heading text-5xl md:text-7xl uppercase tracking-brutal text-parchment mb-4">
+      Шесть альбомов.<br />
+      <span class="text-gold">Двадцать лет.</span>
+    </h2>
+    <p class="font-body text-lg text-parchment/70 max-w-2xl mb-12 md:mb-20">
+      Полная студийная дискография UGK. От сырых демо 1992 до посмертного финала 2009.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {albums.map((a, i) => (
+        <article class="album-card group relative bg-ink border border-parchment/10 hover:border-gold transition-all duration-300" style="transform-style: preserve-3d;">
+          <div class="aspect-square relative overflow-hidden bg-ink-2">
+            <img
+              src={`https://placehold.co/800x800/${placeholderColor(i)}/FFD700/png?text=${encodeURIComponent(a.title)}`}
+              alt={`Обложка альбома ${a.title}`}
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="800"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute top-3 right-3 font-mono text-xs bg-ink/80 text-gold px-3 py-1 backdrop-blur-sm">
+              {a.year}
+            </div>
+          </div>
+
+          <div class="p-6 md:p-8">
+            <h3 class="font-heading text-3xl md:text-4xl uppercase tracking-brutal text-parchment leading-none mb-2">
+              {a.title}
+            </h3>
+            <div class="font-mono text-xs text-parchment/50 mb-4 uppercase tracking-wider">
+              {a.label}
+            </div>
+            <p class="text-sm md:text-base text-parchment/80 mb-4 min-h-[3em]">
+              {a.note}
+            </p>
+            <div class="pt-4 border-t border-parchment/10 flex items-center justify-between text-xs font-mono text-gold">
+              <span class="uppercase tracking-wider">Ключевой трек</span>
+              <span class="text-parchment truncate ml-2">{a.essential}</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const cards = document.querySelectorAll('.album-card');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduced) {
+    cards.forEach((card) => {
+      const el = card as HTMLElement;
+      el.addEventListener('mousemove', (e: MouseEvent) => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        el.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) scale(1.02)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) scale(1)';
+      });
+    });
+  }
+</script>

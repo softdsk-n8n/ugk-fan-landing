@@ -1,0 +1,63 @@
+---
+import GlitchText from './GlitchText.astro';
+---
+<section class="hero relative min-h-screen flex flex-col justify-between overflow-hidden bg-ink scanlines">
+  <header class="relative z-10 flex items-center justify-between p-6 md:p-10 font-mono text-xs md:text-sm uppercase tracking-wider text-parchment/70">
+    <span>Port Arthur · TX</span>
+    <span class="hidden md:inline">Unofficial Fan Archive · v1.0</span>
+    <span>1987 — ∞</span>
+  </header>
+
+  <div class="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-4">
+    <div class="font-display text-mega leading-[0.8] text-parchment select-none">
+      <GlitchText text="UGK" class="block" />
+    </div>
+
+    <h1 class="mt-2 md:mt-6 font-heading text-huge leading-none uppercase tracking-brutal text-gold max-w-5xl">
+      Короли с Юга
+    </h1>
+
+    <p class="mt-6 md:mt-8 max-w-2xl text-base md:text-xl font-body text-parchment/80">
+      Pimp C · Bun B · Port Arthur, Техас.
+      Дуэт, который сформировал язык южного хип-хопа и оставил каталог,
+      от которого никто не отходит тридцать лет.
+    </p>
+
+    <div class="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center">
+      <a
+        href="#essential-tracks"
+        class="group brutal-border inline-flex items-center gap-3 bg-gold text-ink px-8 py-4 font-heading text-xl uppercase tracking-wider hover:bg-crimson hover:text-parchment transition-colors"
+      >
+        Слушать эссеншиалы
+        <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">→</span>
+      </a>
+      <a
+        href="https://www.discogs.com/artist/32130-UGK"
+        rel="nofollow noopener"
+        target="_blank"
+        class="brutal-border-crimson inline-flex items-center gap-3 bg-ink text-parchment px-8 py-4 font-heading text-xl uppercase tracking-wider hover:bg-crimson transition-colors"
+      >
+        Винил на Discogs ↗
+      </a>
+    </div>
+  </div>
+
+  <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-px bg-parchment/20 border-t border-parchment/20 font-mono text-xs md:text-sm">
+    <div class="bg-ink p-4 md:p-6">
+      <div class="text-parchment/50">АЛЬБОМОВ</div>
+      <div class="text-gold text-2xl md:text-4xl font-heading mt-1">06</div>
+    </div>
+    <div class="bg-ink p-4 md:p-6">
+      <div class="text-parchment/50">ЛЕТ ВМЕСТЕ</div>
+      <div class="text-gold text-2xl md:text-4xl font-heading mt-1">20+</div>
+    </div>
+    <div class="bg-ink p-4 md:p-6">
+      <div class="text-parchment/50">BILLBOARD</div>
+      <div class="text-gold text-2xl md:text-4xl font-heading mt-1">#1</div>
+    </div>
+    <div class="bg-ink p-4 md:p-6">
+      <div class="text-parchment/50">PLATINUM</div>
+      <div class="text-gold text-2xl md:text-4xl font-heading mt-1">01</div>
+    </div>
+  </div>
+</section>

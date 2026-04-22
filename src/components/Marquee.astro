@@ -1,0 +1,38 @@
+---
+interface Props {
+  items: string[];
+  speed?: 'slow' | 'normal' | 'fast';
+  variant?: 'gold' | 'crimson' | 'parchment';
+}
+
+const { items, speed = 'normal', variant = 'gold' } = Astro.props;
+
+const speedMap = { slow: '60s', normal: '30s', fast: '15s' };
+const variantMap = {
+  gold: 'text-gold border-gold',
+  crimson: 'text-crimson border-crimson',
+  parchment: 'text-parchment border-parchment',
+};
+
+const all = [...items, ...items, ...items];
+---
+<div class={`marquee-wrap relative overflow-hidden border-y-4 bg-ink py-4 ${variantMap[variant]}`} role="marquee" aria-hidden="true">
+  <div
+    class="marquee-inner flex gap-12 whitespace-nowrap font-display text-5xl md:text-7xl uppercase"
+    style={`animation: marquee ${speedMap[speed]} linear infinite;`}
+  >
+    {all.map((item) => (
+      <span class="flex items-center gap-12">
+        <span>{item}</span>
+        <span class="text-3xl">✦</span>
+      </span>
+    ))}
+  </div>
+</div>
+
+<style>
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.333%); }
+  }
+</style>

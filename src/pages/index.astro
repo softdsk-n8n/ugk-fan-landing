@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
+import Intro from '../components/Intro.astro';
+import Members from '../components/Members.astro';
+import Discography from '../components/Discography.astro';
+import EssentialTracks from '../components/EssentialTracks.astro';
+import Timeline from '../components/Timeline.astro';
+import Legacy from '../components/Legacy.astro';
+import Gallery from '../components/Gallery.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'UGK — Короли с Юга · Underground Kingz fan archive';
+const description = 'Глубокая fan-страница про UGK (Pimp C + Bun B) из Port Arthur, TX. Дискография, таймлайн, эссеншиалы, наследие. На русском.';
+---
+<Base title={title} description={description}>
+  <Hero />
+
+  <Marquee
+    items={['TRILL', 'UNDERGROUND', 'PORT ARTHUR', 'SWISHAHOUSE', 'CANDY PAINT', 'PIMP C', 'BUN B', 'RIDIN DIRTY']}
+    speed="normal"
+    variant="gold"
+  />
+
+  <Intro />
+  <Members />
+
+  <Marquee
+    items={['TOO HARD TO SWALLOW', 'SUPER TIGHT', "RIDIN' DIRTY", 'DIRTY MONEY', 'UNDERGROUND KINGZ', 'UGK 4 LIFE']}
+    speed="slow"
+    variant="crimson"
+  />
+
+  <Discography />
+  <EssentialTracks />
+  <Timeline />
+
+  <Marquee
+    items={['ТЕХАС', 'PURPLE DRANK', 'CHROME SPINNERS', 'DIAMONDS & WOOD', '1987 — ∞']}
+    speed="fast"
+    variant="parchment"
+  />
+
+  <Legacy />
+  <Gallery />
+  <Footer />
+</Base>
