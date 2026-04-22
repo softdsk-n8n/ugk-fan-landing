@@ -1,8 +1,9 @@
 ---
+const base = import.meta.env.BASE_URL;
 const images = [
-  { src: '/images/gallery/01.webp', alt: 'UGK — архивное фото', span: 'col-span-2 row-span-2' },
-  { src: '/images/gallery/02.jpg', alt: 'UGK — архивное фото', span: '' },
-  { src: '/images/gallery/03.jpg', alt: 'UGK — архивное фото', span: '' },
+  { src: `${base}images/gallery/01.webp`, alt: 'UGK — архивное фото', span: 'col-span-2 row-span-2' },
+  { src: `${base}images/gallery/02.jpg`, alt: 'UGK — архивное фото', span: '' },
+  { src: `${base}images/gallery/03.jpg`, alt: 'UGK — архивное фото', span: '' },
   { src: 'https://source.unsplash.com/800x800/?candy-paint-car,cadillac', alt: 'Candy paint Cadillac', span: '' },
   { src: 'https://source.unsplash.com/800x800/?vinyl-record,hip-hop', alt: 'Винил', span: '' },
   { src: 'https://source.unsplash.com/1200x800/?houston,texas-street,night', alt: 'Хьюстон ночью', span: 'col-span-2' },

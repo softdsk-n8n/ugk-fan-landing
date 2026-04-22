@@ -1,6 +1,7 @@
 ---
 import albums from '../data/albums.json';
 
+const base = import.meta.env.BASE_URL;
 const placeholderColor = (idx: number) => {
   const palette = ['0A0A0A', '6B0F9F', '9E0000', '7A5A2E', 'FFD700', 'F5EDDE'];
   return palette[idx % palette.length];
