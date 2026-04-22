@@ -7,7 +7,7 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, ogImage = `${import.meta.env.BASE_URL}images/og-image.png` } = Astro.props;
+const { title, description, ogImage = `${(import.meta.env.BASE_URL || '/').replace(/\/?$/, '/')}images/og-image.png` } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 <!doctype html>
