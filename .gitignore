@@ -9,3 +9,6 @@ build/
 *.swp
 .DS_Store
 .env
+
+# OS / user data that should never be committed
+%LOCALAPPDATA%/
