@@ -3,53 +3,124 @@ import timeline from '../data/timeline.json';
 ---
 <section id="timeline" class="relative py-24 md:py-40 bg-ink-2 scanlines">
   <div class="max-w-7xl mx-auto px-6 md:px-10">
-    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6">
+    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6" data-ru-text="/ 05 — ТАЙМЛАЙН" data-en-text="/ 05 — TIMELINE">
       / 05 — ТАЙМЛАЙН
     </div>
     <h2 class="font-heading text-5xl md:text-7xl uppercase tracking-brutal text-parchment mb-4">
-      От 1973 <br />
-      <span class="text-crimson">до сейчас.</span>
+      <span data-ru-text="От 1973" data-en-text="From 1973">От 1973</span> <br />
+      <span class="text-crimson" data-ru-text="до сейчас." data-en-text="to now.">до сейчас.</span>
     </h2>
-    <p class="font-body text-lg text-parchment/70 max-w-2xl mb-12 md:mb-16">
+    <p class="font-body text-lg text-parchment/70 max-w-2xl mb-12 md:mb-16" data-ru-text="Пятнадцать точек, в которых меняется вся траектория." data-en-text="Fifteen points where the entire trajectory shifts.">
       Пятнадцать точек, в которых меняется вся траектория.
     </p>
   </div>
 
   <div class="relative">
-    <div class="timeline-scroll overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory">
-      <div class="flex gap-6 md:gap-8 px-6 md:px-10 pb-10 min-w-max">
+    <!-- Scroll hint arrows -->
+    <button id="timeline-left" class="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-gold text-ink font-heading text-2xl hover:bg-crimson hover:text-parchment transition-colors brutal-border" aria-label="Scroll left">←</button>
+    <button id="timeline-right" class="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-gold text-ink font-heading text-2xl hover:bg-crimson hover:text-parchment transition-colors brutal-border" aria-label="Scroll right">→</button>
+
+    <div id="timeline-scroll" class="timeline-scroll overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none">
+      <div class="flex gap-6 md:gap-8 px-6 md:px-16 pb-10 min-w-max">
         {timeline.map((t, i) => (
-          <article class="snap-start flex-shrink-0 w-72 md:w-96 bg-ink brutal-border p-6 md:p-8 relative">
-            <div class="font-display text-6xl md:text-7xl text-gold leading-none mb-4">
-              {t.year}
-            </div>
-            <div class="font-mono text-xs text-parchment/50 mb-4 uppercase tracking-wider">
-              / {String(i + 1).padStart(2, '0')} из {timeline.length}
-            </div>
-            <p class="font-body text-base md:text-lg text-parchment/90 leading-relaxed">
-              {t.event}
-            </p>
-          </article>
+        <article class="snap-start flex-shrink-0 w-72 md:w-96 bg-ink brutal-border p-6 md:p-8 relative hover:border-gold transition-colors">
+          <div class="font-display text-6xl md:text-7xl text-gold leading-none mb-4">
+            {t.year}
+          </div>
+          <div class="font-mono text-xs text-parchment/50 mb-4 uppercase tracking-wider">
+            / {String(i + 1).padStart(2, '0')} <span data-ru-text="из" data-en-text="of">из</span> {timeline.length}
+          </div>
+          <p class="font-body text-base md:text-lg text-parchment/90 leading-relaxed" data-ru={t.event_ru || t.event} data-en={t.event_en || t.event}>
+            {t.event}
+          </p>
+        </article>
         ))}
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-6 md:px-10 mt-6 font-mono text-xs text-parchment/50 flex items-center gap-4">
       <span aria-hidden="true">←</span>
-      <span class="uppercase tracking-wider">Свайп / скролл по горизонтали</span>
+      <span class="uppercase tracking-wider" data-ru-text="Свайп / скролл по горизонтали" data-en-text="Swipe / horizontal scroll">Свайп / скролл по горизонтали</span>
       <span aria-hidden="true">→</span>
     </div>
   </div>
 </section>
 
 <style>
+  .timeline-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) #0A0A0A;
+    -webkit-overflow-scrolling: touch;
+  }
   .timeline-scroll::-webkit-scrollbar {
-    height: 6px;
+    height: 8px;
   }
   .timeline-scroll::-webkit-scrollbar-track {
     background: #0A0A0A;
+    border-radius: 0;
   }
   .timeline-scroll::-webkit-scrollbar-thumb {
     background: var(--gold);
+    border-radius: 0;
+  }
+  .timeline-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--crimson);
+  }
+  .timeline-scroll.grabbing {
+    cursor: grabbing;
+    scroll-behavior: auto;
   }
 </style>
+
+<script>
+  const scrollEl = document.getElementById('timeline-scroll');
+  const leftBtn = document.getElementById('timeline-left');
+  const rightBtn = document.getElementById('timeline-right');
+
+  if (scrollEl) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    scrollEl.addEventListener('mousedown', (e: MouseEvent) => {
+      isDown = true;
+      scrollEl.classList.add('grabbing');
+      startX = e.pageX - scrollEl.offsetLeft;
+      scrollLeft = scrollEl.scrollLeft;
+    });
+
+    scrollEl.addEventListener('mouseleave', () => {
+      isDown = false;
+      scrollEl.classList.remove('grabbing');
+    });
+
+    scrollEl.addEventListener('mouseup', () => {
+      isDown = false;
+      scrollEl.classList.remove('grabbing');
+    });
+
+    scrollEl.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollEl.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      scrollEl.scrollLeft = scrollLeft - walk;
+    });
+
+    // Arrow buttons
+    const scrollAmount = 400;
+    leftBtn?.addEventListener('click', () => {
+      scrollEl.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+    rightBtn?.addEventListener('click', () => {
+      scrollEl.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    // Keyboard support
+    scrollEl.setAttribute('tabindex', '0');
+    scrollEl.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') scrollEl.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      if (e.key === 'ArrowRight') scrollEl.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
+</script>
