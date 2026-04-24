@@ -1,0 +1,64 @@
+---
+---
+
+<div id="lang-switcher" class="fixed top-4 right-4 z-50 flex gap-1 font-mono text-xs uppercase tracking-wider">
+  <button
+    data-lang="ru"
+    class="lang-btn px-3 py-2 border-2 border-gold bg-gold text-ink font-bold transition-all duration-200 hover:bg-gold/80"
+    aria-label="Русский"
+  >
+    RU
+  </button>
+  <button
+    data-lang="en"
+    class="lang-btn px-3 py-2 border-2 border-parchment/30 bg-ink text-parchment/70 font-bold transition-all duration-200 hover:border-gold hover:text-gold"
+    aria-label="English"
+  >
+    EN
+  </button>
+</div>
+
+<script>
+  function initLang() {
+    const saved = localStorage.getItem('ugk-lang') || 'ru';
+    document.documentElement.setAttribute('lang', saved);
+    applyLang(saved);
+  }
+
+  function applyLang(lang: string) {
+    document.documentElement.setAttribute('lang', localStorage.getItem('ugk-lang') || lang);
+
+    document.querySelectorAll('[data-ru]').forEach((el) => {
+      const htmlEl = el as HTMLElement;
+      const ru = htmlEl.dataset.ru || '';
+      const en = htmlEl.dataset.en || '';
+      htmlEl.innerHTML = lang === 'en' ? en : ru;
+    });
+
+    document.querySelectorAll<HTMLElement>('[data-ru-text]').forEach((el) => {
+      const ru = el.dataset.ruText || '';
+      const en = el.dataset.enText || '';
+      el.textContent = lang === 'en' ? en : ru;
+    });
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      const b = btn as HTMLElement;
+      const isActive = b.dataset.lang === lang;
+      if (isActive) {
+        b.className = 'lang-btn px-3 py-2 border-2 border-gold bg-gold text-ink font-bold transition-all duration-200 hover:bg-gold/80';
+      } else {
+        b.className = 'lang-btn px-3 py-2 border-2 border-parchment/30 bg-ink text-parchment/70 font-bold transition-all duration-200 hover:border-gold hover:text-gold';
+      }
+    });
+  }
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = (btn as HTMLElement).dataset.lang || 'ru';
+      localStorage.setItem('ugk-lang', lang);
+      applyLang(lang);
+    });
+  });
+
+  initLang();
+</script>

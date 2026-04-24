@@ -1,0 +1,216 @@
+{
+  "hero": {
+    "subtitle": { "ru": "Короли с Юга", "en": "Kings of the South" },
+    "description": {
+      "ru": "Pimp C · Bun B · Port Arthur, Техас. Дуэт, который сформировал язык южного хип-хопа и оставил каталог, от которого никто не отходит тридцать лет.",
+      "en": "Pimp C · Bun B · Port Arthur, Texas. The duo that shaped the language of Southern hip-hop and left a catalog nobody's walked away from in thirty years."
+    },
+    "ctaListen": { "ru": "Слушать эссеншиалы", "en": "Listen to essentials" },
+    "ctaVinyl": { "ru": "Винил на Discogs ↗", "en": "Vinyl on Discogs ↗" },
+    "statAlbums": { "ru": "АЛЬБОМОВ", "en": "ALBUMS" },
+    "statYears": { "ru": "ЛЕТ ВМЕСТЕ", "en": "YEARS TOGETHER" },
+    "statBillboard": { "ru": "BILLBOARD", "en": "BILLBOARD" },
+    "statPlatinum": { "ru": "PLATINUM", "en": "PLATINUM" }
+  },
+  "header": {
+    "location": { "ru": "Port Arthur · TX", "en": "Port Arthur · TX" },
+    "version": { "ru": "Неофициальный фан-архив · v1.0", "en": "Unofficial Fan Archive · v1.0" },
+    "era": { "ru": "1987 — ∞", "en": "1987 — ∞" }
+  },
+  "intro": {
+    "label": { "ru": "/ 01 — WHO", "en": "/ 01 — WHO" },
+    "title": {
+      "ru": "Underground Kingz.",
+      "en": "Underground Kingz."
+    },
+    "titleAccent": {
+      "ru": "Королевство не спрашивает разрешения.",
+      "en": "The kingdom doesn't ask permission."
+    },
+    "p1": {
+      "ru": "UGK — Chad \"Pimp C\" Butler и Bernard \"Bun B\" Freeman. Два школьных товарища из Port Arthur, Техас, собравшиеся в 1987-м, когда хип-хоп на Юге ещё считали шумом.",
+      "en": "UGK — Chad \"Pimp C\" Butler and Bernard \"Bun B\" Freeman. Two school friends from Port Arthur, Texas, who came together in 1987, when Southern hip-hop was still considered noise."
+    },
+    "p2": {
+      "ru": "К 1996 году, с альбомом Ridin' Dirty, они задали каноны на десятилетия: candy paint, chrome spinners, басовые линии, в которых тяжесть физически ощущается в груди.",
+      "en": "By 1996, with the album Ridin' Dirty, they set the standards for decades: candy paint, chrome spinners, bass lines where the weight is physically felt in your chest."
+    },
+    "p3": {
+      "ru": "В 2007-м — двойной альбом Underground Kingz, #1 Billboard 200, «International Players Anthem» с Outkast. В декабре того же года — смерть Pimp C. Звук южного хип-хопа не восстановился полностью.",
+      "en": "In 2007 — the double album Underground Kingz, #1 Billboard 200, «International Players Anthem» with OutKast. In December of the same year — the death of Pimp C. Southern hip-hop's sound never fully recovered."
+    },
+    "quoteBadge": { "ru": "Bun B", "en": "Bun B" },
+    "quote": {
+      "ru": "\"Trill —<br/>это не слово.<br/><span class=\"text-gold\">Это способ жить.</span>\"",
+      "en": "\"Trill —<br/>it's not a word.<br/><span class=\"text-gold\">It's a way of living.</span>\""
+    },
+    "quoteCite": { "ru": "цит., 2005", "en": "cit., 2005" }
+  },
+  "members": {
+    "label": { "ru": "/ 02 — ДУЭТ", "en": "/ 02 — THE DUO" },
+    "title": { "ru": "Два голоса.", "en": "Two voices." },
+    "titleAccent": { "ru": "Один Port Arthur.", "en": "One Port Arthur." },
+    "pimpC": {
+      "bio": {
+        "ru": "Продюсер, вокалист, идеолог звука UGK. Его биты, построенные на funk-семплах и медленных басах, стали ДНК хьюстонского саунда. Острый язык, бескомпромиссный. Умер 4 декабря 2007-го в Лос-Анджелесе.",
+        "en": "Producer, vocalist, sonic ideologist of UGK. His beats, built on funk samples and slow bass, became the DNA of the Houston sound. Sharp tongue, uncompromising. Died December 4, 2007 in Los Angeles."
+      },
+      "legacy": {
+        "ru": "Pimp C дал южному хип-хопу голос — не просто акцент, а мировоззрение.",
+        "en": "Pimp C gave Southern hip-hop a voice — not just an accent, but a worldview."
+      }
+    },
+    "bunB": {
+      "bio": {
+        "ru": "Главный лирический мотор UGK. После ухода Pimp C — один из самых уважаемых ветеранов хип-хопа. Преподаёт курс по религии и рэпу в Rice University. Продолжает соло-карьеру и защищает наследие UGK.",
+        "en": "The main lyrical engine of UGK. After Pimp C's passing — one of the most respected veterans in hip-hop. Teaches a course on religion and rap at Rice University. Continues his solo career and protects the UGK legacy."
+      },
+      "legacy": {
+        "ru": "Bun B — живая институция. Пока он читает, история UGK продолжается.",
+        "en": "Bun B is a living institution. As long as he spits, the UGK story continues."
+      }
+    }
+  },
+  "discography": {
+    "label": { "ru": "/ 03 — ДИСКОГРАФИЯ", "en": "/ 03 — DISCOGRAPHY" },
+    "title": { "ru": "Шесть альбомов.", "en": "Six albums." },
+    "titleAccent": { "ru": "Двадцать лет.", "en": "Twenty years." },
+    "description": {
+      "ru": "Полная студийная дискография UGK. От сырых демо 1992 до посмертного финала 2009.",
+      "en": "The complete UGK studio discography. From raw demos in 1992 to the posthumous finale in 2009."
+    },
+    "keyTrack": { "ru": "Ключевой трек", "en": "Key track" }
+  },
+  "albums": {
+    "too-hard-to-swallow": {
+      "note": {
+        "ru": "Дебютный альбом. Грубый, сырой саут-хоп с фирменными басами Pimp C.",
+        "en": "Debut album. Raw, unpolished Southern hop with Pimp C's signature bass."
+      }
+    },
+    "super-tight": {
+      "note": {
+        "ru": "Gold certification. Пробой в национальный эфир, но звук всё ещё 100% техасский.",
+        "en": "Gold certification. Breakthrough to national radio, but the sound is still 100% Texas."
+      }
+    },
+    "ridin-dirty": {
+      "note": {
+        "ru": "Классика. Platinum. Candy paint, chrome spinners, purple drank — UGK задали каноны.",
+        "en": "Classic. Platinum. Candy paint, chrome spinners, purple drank — UGK set the standards."
+      }
+    },
+    "dirty-money": {
+      "note": {
+        "ru": "Реванш после паузы. Жёстче, политичнее, злее.",
+        "en": "Comeback after the hiatus. Harder, more political, angrier."
+      }
+    },
+    "underground-kingz": {
+      "note": {
+        "ru": "Двойной альбом. #1 Billboard 200. Включает «International Players Anthem» с Outkast.",
+        "en": "Double album. #1 Billboard 200. Includes «International Players Anthem» with OutKast."
+      }
+    },
+    "ugk-4-life": {
+      "note": {
+        "ru": "Посмертный релиз. Pimp C не дожил. Bun B закончил за двоих.",
+        "en": "Posthumous release. Pimp C didn't live to see it. Bun B finished for both of them."
+      }
+    }
+  },
+  "essentialTracks": {
+    "label": { "ru": "/ 04 — ЭССЕНШИАЛЫ", "en": "/ 04 — ESSENTIALS" },
+    "title": { "ru": "С чего", "en": "Where to" },
+    "titleAccent": { "ru": "начать слушать", "en": "start listening" },
+    "description": {
+      "ru": "Пять треков — не чтобы понять UGK, а чтобы понять южный хип-хоп вообще.",
+      "en": "Five tracks — not just to understand UGK, but to understand Southern hip-hop period."
+    },
+    "videoNote": {
+      "ru": "Видео встроены через YouTube. Вся музыка — собственность UGK и правообладателей.",
+      "en": "Videos embedded via YouTube. All music is property of UGK and rights holders."
+    }
+  },
+  "tracks": {
+    "one-day": {
+      "note": {
+        "ru": "Пожалуй самый эмоциональный трек в каталоге. Рефлексия о смертности.",
+        "en": "Perhaps the most emotional track in the catalog. A reflection on mortality."
+      }
+    },
+    "diamonds-and-wood": {
+      "note": {
+        "ru": "Визитка южного хип-хопа: бас, спин, костюмы в полный рост.",
+        "en": "The calling card of Southern hip-hop: bass, spinners, full-length suits."
+      }
+    },
+    "international-players": {
+      "note": {
+        "ru": "С OutKast. Семпл Willie Hutch. Один из самых цитируемых куплетов Pimp C.",
+        "en": "With OutKast. Willie Hutch sample. One of Pimp C's most quoted verses."
+      }
+    },
+    "big-pimpin": {
+      "note": {
+        "ru": "UGK в гостях у Jay-Z. Мировое признание пришло именно здесь.",
+        "en": "UGK guesting with Jay-Z. Global recognition arrived right here."
+      }
+    },
+    "pocket-full-of-stones": {
+      "note": {
+        "ru": "Ранний UGK. Сырой, прямой, без прикрас.",
+        "en": "Early UGK. Raw, direct, no frills."
+      }
+    }
+  },
+  "timeline": {
+    "label": { "ru": "/ 05 — ТАЙМЛАЙН", "en": "/ 05 — TIMELINE" },
+    "title": { "ru": "От 1973", "en": "From 1973" },
+    "titleAccent": { "ru": "до сейчас.", "en": "to now." },
+    "description": {
+      "ru": "Пятнадцать точек, в которых меняется вся траектория.",
+      "en": "Fifteen points where the entire trajectory shifts."
+    },
+    "scrollHint": { "ru": "Свайп / скролл по горизонтали", "en": "Swipe / scroll horizontally" },
+    "outOf": { "ru": "из", "en": "of" }
+  },
+  "legacy": {
+    "label": { "ru": "/ 06 — НАСЛЕДИЕ", "en": "/ 06 — LEGACY" },
+    "title": { "ru": "Что говорят", "en": "What the" },
+    "titleAccent": { "ru": "великие.", "en": "greats say." },
+    "description": {
+      "ru": "Когда о UGK говорят Jay-Z, André 3000, Big Boi — дискуссия закрыта.",
+      "en": "When Jay-Z, André 3000, Big Boi speak on UGK — the discussion is closed."
+    }
+  },
+  "gallery": {
+    "label": { "ru": "/ 07 — АРХИВ", "en": "/ 07 — ARCHIVE" },
+    "title": { "ru": "Визуальный", "en": "Visual" },
+    "titleAccent": { "ru": "код.", "en": "code." },
+    "description": {
+      "ru": "Фрагменты наследия. Candy paint, винил, Port Arthur, бесконечные рамки.",
+      "en": "Fragments of the legacy. Candy paint, vinyl, Port Arthur, endless frames."
+    },
+    "photoCredit": { "ru": "Фото: архив UGK.", "en": "Photos: UGK archive." }
+  },
+  "footer": {
+    "ugk": { "ru": "UGK", "en": "UGK" },
+    "tagline": { "ru": "Неофициальный фан-архив · Port Arthur → ∞", "en": "Unofficial fan archive · Port Arthur → ∞" },
+    "listen": { "ru": "Слушать", "en": "Listen" },
+    "archive": { "ru": "Архив", "en": "Archive" },
+    "disclaimer": {
+      "ru": "Это неофициальный фан-архив, созданный из уважения к наследию UGK.",
+      "en": "This is an unofficial fan archive, created out of respect for the UGK legacy."
+    },
+    "disclaimer2": {
+      "ru": "Все названия, имена, изображения и музыка — собственность UGK, Rap-A-Lot Records, Jive Records и соответствующих правообладателей. Музыкальные видео встроены через YouTube в образовательных целях.",
+      "en": "All names, images, and music are property of UGK, Rap-A-Lot Records, Jive Records, and respective rights holders. Music videos embedded via YouTube for educational purposes."
+    },
+    "madeWith": { "ru": "Fan archive · Made with respect in Landos Monsta", "en": "Fan archive · Made with respect in Landos Monsta" }
+  },
+  "lang": {
+    "ru": "RU",
+    "en": "EN"
+  }
+}
