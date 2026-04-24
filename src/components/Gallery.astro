@@ -1,42 +1,64 @@
 ---
 const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
 const images = [
-  { src: `${base}images/gallery/01.webp`, alt: 'UGK — архивное фото', span: 'col-span-2 row-span-2' },
-  { src: `${base}images/gallery/02.jpg`, alt: 'UGK — архивное фото', span: '' },
-  { src: `${base}images/gallery/03.jpg`, alt: 'UGK — архивное фото', span: '' },
+  { src: `${base}images/gallery/01.webp`, alt_ru: 'UGK — архивное фото', alt_en: 'UGK — archive photo', span: 'col-span-2 row-span-2' },
+  { src: `${base}images/gallery/02.jpg`, alt_ru: 'UGK — архивное фото', alt_en: 'UGK — archive photo', span: '' },
+  { src: `${base}images/gallery/03.jpg`, alt_ru: 'UGK — архивное фото', alt_en: 'UGK — archive photo', span: '' },
+  { src: `${base}images/gallery/04-bun-b-2013.jpg`, alt_ru: 'Bun B, 2013', alt_en: 'Bun B, 2013', span: '' },
+  { src: `${base}images/gallery/05-bun-b-2025.jpg`, alt_ru: 'Bun B, 2025', alt_en: 'Bun B, 2025', span: 'col-span-2' },
+  { src: `${base}images/gallery/06-bun-b-live.jpg`, alt_ru: 'Bun B — концерт в Атланте', alt_en: 'Bun B — live in Atlanta', span: '' },
+  { src: `${base}images/gallery/07-pimp-c.jpg`, alt_ru: 'Chad «Pimp C» Butler', alt_en: 'Chad "Pimp C" Butler', span: '' },
+  { src: `${base}images/gallery/08-underground-kingz-album.jpg`, alt_ru: 'Обложка Underground Kingz', alt_en: 'Underground Kingz album cover', span: 'col-span-2 row-span-2' },
+  { src: `${base}images/gallery/09-bun-b-performing.jpg`, alt_ru: 'Bun B — выступление', alt_en: 'Bun B — performing', span: '' },
 ];
 ---
 <section id="gallery" class="relative py-24 md:py-40 bg-ink">
   <div class="max-w-7xl mx-auto px-6 md:px-10">
-    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6">
+    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6" data-ru-text="/ 03 — АРХИВ" data-en-text="/ 03 — ARCHIVE">
       / 03 — АРХИВ
     </div>
     <h2 class="font-heading text-5xl md:text-7xl uppercase tracking-brutal text-parchment mb-4">
-      Визуальный<br />
-      <span class="text-crimson">код.</span>
+      <span data-ru-text="Визуальный" data-en-text="Visual">Визуальный</span><br />
+      <span class="text-crimson" data-ru-text="код." data-en-text="code.">код.</span>
     </h2>
-    <p class="font-body text-lg text-parchment/70 max-w-2xl mb-12 md:mb-16">
+    <p class="font-body text-lg text-parchment/70 max-w-2xl mb-12 md:mb-16" data-ru-text="Фрагменты наследия. Candy paint, винил, Port Arthur, бесконечные рамки." data-en-text="Fragments of the legacy. Candy paint, vinyl, Port Arthur, infinite frames.">
       Фрагменты наследия. Candy paint, винил, Port Arthur, бесконечные рамки.
     </p>
 
     <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[240px] gap-3 md:gap-4">
       {images.map((img) => (
-        <figure class={`relative overflow-hidden brutal-border-crimson group ${img.span}`}>
-          <img
-            src={img.src}
-            alt={img.alt}
-            loading="lazy"
-            decoding="async"
-            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-            onerror="this.style.display='none'"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-        </figure>
+      <figure class={`relative overflow-hidden brutal-border-crimson group ${img.span}`}>
+        <img
+          src={img.src}
+          alt={img.alt_ru}
+          data-ru-alt={img.alt_ru}
+          data-en-alt={img.alt_en}
+          loading="lazy"
+          decoding="async"
+          class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+          onerror="this.style.display='none'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+      </figure>
       ))}
     </div>
 
-    <p class="mt-8 font-mono text-xs text-parchment/40 uppercase tracking-wider">
-      Фото 01–03: архив UGK.
+    <p class="mt-8 font-mono text-xs text-parchment/40 uppercase tracking-wider" data-ru-text="Фото 01–09: архив UGK. Лицензии: CC BY-SA 2.0 / Fair Use." data-en-text="Photos 01–09: UGK archive. Licenses: CC BY-SA 2.0 / Fair Use.">
+      Фото 01–09: архив UGK. Лицензии: CC BY-SA 2.0 / Fair Use.
     </p>
   </div>
 </section>
+
+<script>
+  function updateAlts() {
+    const lang = document.documentElement.getAttribute('lang') || 'ru';
+    document.querySelectorAll<HTMLElement>('[data-ru-alt]').forEach((img) => {
+      const alt = lang === 'en' ? (img.dataset.enAlt || '') : (img.dataset.ruAlt || '');
+      img.setAttribute('alt', alt);
+    });
+  }
+
+  updateAlts();
+  const observer = new MutationObserver(updateAlts);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+</script>

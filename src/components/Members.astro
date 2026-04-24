@@ -7,8 +7,10 @@ const members = [
     dates: '1973 — 2007',
     photo: `${base}images/members/pimp-c.webp`,
     accent: 'gold',
-    bio: 'Продюсер, вокалист, идеолог звука UGK. Его биты, построенные на funk-семплах и медленных басах, стали ДНК хьюстонского саунда. Острый язык, бескомпромиссный. Умер 4 декабря 2007-го в Лос-Анджелесе.',
-    legacy: 'Pimp C дал южному хип-хопу голос — не просто акцент, а мировоззрение.'
+    bio_ru: 'Продюсер, вокалист, идеолог звука UGK. Его биты, построенные на funk-семплах и медленных басах, стали ДНК хьюстонского саунда. Острый язык, бескомпромиссный. Умер 4 декабря 2007-го в Лос-Анджелесе.',
+    bio_en: 'Producer, vocalist, the sonic architect of UGK. His beats — built on funk samples and slow bass — became the DNA of the Houston sound. Sharp tongue, uncompromising. Died December 4, 2007 in Los Angeles.',
+    legacy_ru: 'Pimp C дал южному хип-хопу голос — не просто акцент, а мировоззрение.',
+    legacy_en: 'Pimp C gave Southern hip-hop a voice — not just an accent, but a worldview.'
   },
   {
     nick: 'Bun B',
@@ -16,53 +18,55 @@ const members = [
     dates: '1973 — ',
     photo: `${base}images/members/bun-b.jpg`,
     accent: 'crimson',
-    bio: 'Главный лирический мотор UGK. После ухода Pimp C — один из самых уважаемых ветеранов хип-хопа. Преподаёт курс по религии и рэпу в Rice University. Продолжает соло-карьеру и защищает наследие UGK.',
-    legacy: 'Bun B — живая институция. Пока он читает, история UGK продолжается.'
+    bio_ru: 'Главный лирический мотор UGK. После ухода Pimp C — один из самых уважаемых ветеранов хип-хопа. Преподаёт курс по религии и рэпу в Rice University. Продолжает соло-карьеру и защищает наследие UGK.',
+    bio_en: 'The main lyrical engine of UGK. After Pimp C\'s passing — one of hip-hop\'s most respected veterans. Teaches a course on religion and rap at Rice University. Continues his solo career and protects UGK\'s legacy.',
+    legacy_ru: 'Bun B — живая институция. Пока он читает, история UGK продолжается.',
+    legacy_en: 'Bun B is a living institution. As long as he spits, UGK\'s story continues.'
   }
 ];
 ---
 <section id="members" class="relative py-24 md:py-40 bg-ink">
   <div class="max-w-7xl mx-auto px-6 md:px-10">
-    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6">
+    <div class="font-mono text-xs md:text-sm text-gold uppercase tracking-wider mb-6" data-ru-text="/ 02 — ДУЭТ" data-en-text="/ 02 — THE DUO">
       / 02 — ДУЭТ
     </div>
     <h2 class="font-heading text-5xl md:text-7xl uppercase tracking-brutal text-parchment mb-12 md:mb-20">
-      Два голоса.<br />
-      <span class="text-crimson">Один Port Arthur.</span>
+      <span data-ru-text="Два голоса." data-en-text="Two voices.">Два голоса.</span><br />
+      <span class="text-crimson" data-ru-text="Один Port Arthur." data-en-text="One Port Arthur.">Один Port Arthur.</span>
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
       {members.map((m, i) => (
-        <article class={`group relative bg-ink-2 brutal-border ${m.accent === 'crimson' ? 'md:mt-20' : ''}`}>
-          <div class="aspect-[4/5] overflow-hidden relative bg-ink">
-            <img
-              src={m.photo}
-              alt={`${m.nick} (${m.realName})`}
-              width={800}
-              height={1000}
-              loading={i === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent pointer-events-none"></div>
-          </div>
+      <article class={`group relative bg-ink-2 brutal-border ${m.accent === 'crimson' ? 'md:mt-20' : ''}`}>
+        <div class="aspect-[4/5] overflow-hidden relative bg-ink">
+          <img
+            src={m.photo}
+            alt={`${m.nick} (${m.realName})`}
+            width={800}
+            height={1000}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent pointer-events-none"></div>
+        </div>
 
-          <div class="p-6 md:p-10">
-            <div class="flex items-baseline justify-between gap-4 mb-4">
-              <h3 class={`font-display text-5xl md:text-7xl leading-none ${m.accent === 'gold' ? 'text-gold' : 'text-crimson'}`}>
-                {m.nick}
-              </h3>
-              <span class="font-mono text-xs text-parchment/50 whitespace-nowrap">{m.dates}</span>
-            </div>
-            <div class="font-mono text-sm text-parchment/70 mb-6">{m.realName}</div>
-            <p class="text-base md:text-lg font-body text-parchment/90 leading-relaxed mb-6">
-              {m.bio}
-            </p>
-            <blockquote class="border-l-4 border-gold pl-6 italic text-parchment/80 font-body">
-              {m.legacy}
-            </blockquote>
+        <div class="p-6 md:p-10">
+          <div class="flex items-baseline justify-between gap-4 mb-4">
+            <h3 class={`font-display text-5xl md:text-7xl leading-none ${m.accent === 'gold' ? 'text-gold' : 'text-crimson'}`}>
+              {m.nick}
+            </h3>
+            <span class="font-mono text-xs text-parchment/50 whitespace-nowrap">{m.dates}</span>
           </div>
-        </article>
+          <div class="font-mono text-sm text-parchment/70 mb-6">{m.realName}</div>
+          <p class="text-base md:text-lg font-body text-parchment/90 leading-relaxed mb-6" data-ru={m.bio_ru} data-en={m.bio_en}>
+            {m.bio_ru}
+          </p>
+          <blockquote class="border-l-4 border-gold pl-6 italic text-parchment/80 font-body" data-ru={m.legacy_ru} data-en={m.legacy_en}>
+            {m.legacy_ru}
+          </blockquote>
+        </div>
+      </article>
       ))}
     </div>
   </div>
