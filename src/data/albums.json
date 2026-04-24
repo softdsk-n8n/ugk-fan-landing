@@ -4,7 +4,8 @@
     "title": "Too Hard to Swallow",
     "year": 1992,
     "label": "Jive Records",
-    "note": "Дебютный альбом. Грубый, сырой саут-хоп с фирменными басами Pimp C.",
+    "note_ru": "Дебютный альбом. Грубый, сырой саут-хоп с фирменными басами Pimp C.",
+    "note_en": "Debut album. Raw, gritty Southern hop with Pimp C's signature bass.",
     "essential": "Pocket Full of Stones",
     "cover": "/images/albums/too-hard-to-swallow.jpg"
   },
@@ -13,7 +14,8 @@
     "title": "Super Tight",
     "year": 1994,
     "label": "Jive Records",
-    "note": "Gold certification. Пробой в национальный эфир, но звук всё ещё 100% техасский.",
+    "note_ru": "Gold certification. Пробой в национальный эфир, но звук всё ещё 100% техасский.",
+    "note_en": "Gold certification. Break into national airplay, but the sound is still 100% Texan.",
     "essential": "It's Supposed to Bubble",
     "cover": "/images/albums/super-tight.jpg"
   },
@@ -22,7 +24,8 @@
     "title": "Ridin' Dirty",
     "year": 1996,
     "label": "Jive Records",
-    "note": "Классика. Platinum. Candy paint, chrome spinners, purple drank — UGK задали каноны.",
+    "note_ru": "Классика. Platinum. Candy paint, chrome spinners, purple drank — UGK задали каноны.",
+    "note_en": "Classic. Platinum. Candy paint, chrome spinners, purple drank — UGK set the standards.",
     "essential": "One Day",
     "cover": "/images/albums/ridin-dirty.jpg"
   },
@@ -31,7 +34,8 @@
     "title": "Dirty Money",
     "year": 2001,
     "label": "Jive Records",
-    "note": "Реванш после паузы. Жёстче, политичнее, злее.",
+    "note_ru": "Реванш после паузы. Жёстче, политичнее, злее.",
+    "note_en": "Comeback after the pause. Harder, more political, angrier.",
     "essential": "Take tha Hood Back",
     "cover": "/images/albums/dirty-money.jpg"
   },
@@ -40,7 +44,8 @@
     "title": "Underground Kingz",
     "year": 2007,
     "label": "Jive Records",
-    "note": "Двойной альбом. #1 Billboard 200. Включает «International Players Anthem» с Outkast.",
+    "note_ru": "Двойной альбом. #1 Billboard 200. Включает «International Players Anthem» с Outkast.",
+    "note_en": "Double album. #1 Billboard 200. Includes \"International Players Anthem\" with OutKast.",
     "essential": "International Players Anthem (I Choose You)",
     "cover": "/images/albums/underground-kingz.jpg"
   },
@@ -49,7 +54,8 @@
     "title": "UGK 4 Life",
     "year": 2009,
     "label": "Jive Records",
-    "note": "Посмертный релиз. Pimp C не дожил. Bun B закончил за двоих.",
+    "note_ru": "Посмертный релиз. Pimp C не дожил. Bun B закончил за двоих.",
+    "note_en": "Posthumous release. Pimp C didn't live to see it. Bun B finished for both of them.",
     "essential": "Da Game Been Good to Me",
     "cover": "/images/albums/ugk-4-life.jpg"
   }

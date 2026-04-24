@@ -3,35 +3,40 @@
     "title": "One Day",
     "album": "Ridin' Dirty",
     "year": 1996,
-    "youtube": "https://www.youtube.com/embed/3kH4PiTKwJ4",
-    "note": "Пожалуй самый эмоциональный трек в каталоге. Рефлексия о смертности."
+    "youtube": "https://www.youtube.com/embed/bu7L8vzuP74",
+    "note_ru": "Пожалуй самый эмоциональный трек в каталоге. Рефлексия о смертности.",
+    "note_en": "Perhaps the most emotional track in the catalog. A reflection on mortality."
   },
   {
     "title": "Diamonds & Wood",
     "album": "Ridin' Dirty",
     "year": 1996,
-    "youtube": "https://www.youtube.com/embed/c1TW4cQtMQk",
-    "note": "Визитка южного хип-хопа: бас, спин, костюмы в полный рост."
+    "youtube": "https://www.youtube.com/embed/HeEimDSyN1w",
+    "note_ru": "Визитка южного хип-хопа: бас, спин, костюмы в полный рост.",
+    "note_en": "The calling card of Southern hip-hop: bass, spinners, full-length suits."
   },
   {
     "title": "International Players Anthem (I Choose You)",
     "album": "Underground Kingz",
     "year": 2007,
-    "youtube": "https://www.youtube.com/embed/zFk9TMXdkUs",
-    "note": "С OutKast. Семпл Willie Hutch. Один из самых цитируемых куплетов Pimp C."
+    "youtube": "https://www.youtube.com/embed/WG3qnNkmqvU",
+    "note_ru": "С OutKast. Семпл Willie Hutch. Один из самых цитируемых куплетов Pimp C.",
+    "note_en": "With OutKast. Willie Hutch sample. One of Pimp C's most quoted verses."
   },
   {
     "title": "Big Pimpin'",
     "album": "Jay-Z — Vol. 3: Life and Times of S. Carter",
     "year": 1999,
-    "youtube": "https://www.youtube.com/embed/JOjq7vOAqjU",
-    "note": "UGK в гостях у Jay-Z. Мировое признание пришло именно здесь."
+    "youtube": "https://www.youtube.com/embed/Cgoqrgc_0cM",
+    "note_ru": "UGK в гостях у Jay-Z. Мировое признание пришло именно здесь.",
+    "note_en": "UGK guesting with Jay-Z. Global recognition arrived right here."
   },
   {
     "title": "Pocket Full of Stones",
     "album": "Too Hard to Swallow",
     "year": 1992,
-    "youtube": "https://www.youtube.com/embed/Lo93iDHkSug",
-    "note": "Ранний UGK. Сырой, прямой, без прикрас."
+    "youtube": "https://www.youtube.com/embed/MnP1XmxyqxA",
+    "note_ru": "Ранний UGK. Сырой, прямой, без прикрас.",
+    "note_en": "Early UGK. Raw, direct, no embellishment."
   }
 ]
